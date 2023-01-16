@@ -1,0 +1,9 @@
+name: ml-hyperopt
+channels:
+  - defaults
+dependencies:
+  - matplotlib
+  - numpy
+  - pandas
+  - python=3.10
+  - scikit-learn
