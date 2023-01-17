@@ -1,11 +1,29 @@
-# List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
-image: gitpod/workspace-full:2022-05-08-14-31-53
+github:
+  prebuilds:
+    # enable for the master/default branch (defaults to true)
+    master: true
+    # enable for all branches in this repo (defaults to false)
+    branches: false
+    # enable for pull requests coming from this repo (defaults to true)
+    pullRequests: true
+    # enable for pull requests coming from forks (defaults to false)
+    pullRequestsFromForks: true
+    # add a "Review in Gitpod" button as a comment to pull requests (defaults to true)
+    addComment: true
+    # add a "Review in Gitpod" button to pull requests (defaults to false)
+    addBadge: false
 
-tasks:
-  - init: echo 'init script' # runs during prebuild
-    command: echo 'start script'
-
-# List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
-ports:
-  - port: 3000
-    onOpen: open-preview
+image: chriswyatt/seqeratraining_22.09.7
+    
+vscode:
+  extensions: # based on nf-core.nf-core-extensionpack
+    - codezombiech.gitignore # Language support for .gitignore files
+    - cssho.vscode-svgviewer               # SVG viewer
+    - esbenp.prettier-vscode # Markdown/CommonMark linting and style checking for Visual Studio Code
+    - EditorConfig.EditorConfig # override user/workspace settings with settings found in .editorconfig files
+    - Gruntfuggly.todo-tree # Display TODO and FIXME in a tree view in the activity bar
+    # - mechatroner.rainbow-csv # Highlight columns in csv files in different colors
+    - nextflow.nextflow                    # Nextflow syntax highlighting
+    # - oderwat.indent-rainbow # Highlight indentation level
+    - streetsidesoftware.code-spell-checker # Spelling checker for source code
+    - ms-vscode.live-server
