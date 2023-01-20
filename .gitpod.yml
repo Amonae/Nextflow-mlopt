@@ -5,9 +5,6 @@ tasks:
 
   - name: Start web server
     command: gp ports await 23000  
-
-  - name: Load Nextflow Tutorial
-    command: docker pull -q nextflow/rnaseq-nf
       
   - name: Start Nextflow Tutorial
     command: |
