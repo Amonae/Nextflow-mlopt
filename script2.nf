@@ -1,6 +1,3 @@
-params.data = "$projectDir/data/OSA_sample.csv"
-params.outdir = "results"
-
 log.info """\
     M A C H I N E   L E A R N I N G   P I P E L I N E
     ===================================
