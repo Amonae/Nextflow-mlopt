@@ -13,7 +13,7 @@ log.info """\
  * I just want to load the data, get dimensions, print names (maybe save as metadata)
  * view severity value counts, maybe plot value counts, maybe plot a tsne
  */
-process INDEX {
+process visualize {
     input:
     path transcriptome
 
