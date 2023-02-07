@@ -11,15 +11,18 @@ log.info """\
  * view severity value counts, maybe plot value counts, maybe plot a tsne
  */
 process visualize {
+    publishDir params.outdir, mode: 'copy', saveAs: { file -> "${dataset_name}.${file}" }
+    tag "${dataset_name}"
+
     input:
-    path transcriptome
+    val(dataset_name)
 
     output:
-    path 'salmon_index'
+    tuple val(dataset_name), path('data.txt'), path('meta.json'), emit: datasets
 
     script:
     """
-    salmon index --threads $task.cpus -t $transcriptome -i salmon_index
+    visualize.py --name ${dataset_name}
     """
 }
 
